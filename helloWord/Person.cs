@@ -1,16 +1,27 @@
-﻿        using System;
-
+﻿using System;
 
 namespace helloWord
 {
-    public class Person
+    public class person
     {
-        public string firstName;
-        public string lastName;
 
-        public void indroduce()
-        {
-            Console.WriteLine("my name is "  + firstName + " " + lastName);
+        public DateTime BirthDate { set; get; }
+
+
+       
+
+
+        public int Age { 
+            get
+            {
+
+              var timeSpan =   DateTime.Today - BirthDate;
+              var years =   timeSpan.Days / 365;
+                return years ;
+            } 
         }
+
+    } 
+
+
     }
-}

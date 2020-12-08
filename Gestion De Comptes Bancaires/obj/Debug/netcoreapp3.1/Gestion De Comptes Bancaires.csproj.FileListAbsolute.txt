@@ -1,0 +1,13 @@
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\bin\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.exe
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\bin\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.deps.json
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\bin\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.runtimeconfig.json
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\bin\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.runtimeconfig.dev.json
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\bin\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.dll
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\bin\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.pdb
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\obj\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.csprojAssemblyReference.cache
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\obj\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.AssemblyInfoInputs.cache
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\obj\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.AssemblyInfo.cs
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\obj\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.csproj.CoreCompileInputs.cache
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\obj\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.dll
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\obj\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.pdb
+C:\Users\youcode\source\repos\helloWord\Gestion De Comptes Bancaires\obj\Debug\netcoreapp3.1\Gestion De Comptes Bancaires.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\Users\youcode\source\repos\helloWord\heritage\bin\Debug\netcoreapp3.1\heritage.exe
+C:\Users\youcode\source\repos\helloWord\heritage\bin\Debug\netcoreapp3.1\heritage.deps.json
+C:\Users\youcode\source\repos\helloWord\heritage\bin\Debug\netcoreapp3.1\heritage.runtimeconfig.json
+C:\Users\youcode\source\repos\helloWord\heritage\bin\Debug\netcoreapp3.1\heritage.runtimeconfig.dev.json
+C:\Users\youcode\source\repos\helloWord\heritage\bin\Debug\netcoreapp3.1\heritage.dll
+C:\Users\youcode\source\repos\helloWord\heritage\bin\Debug\netcoreapp3.1\heritage.pdb
+C:\Users\youcode\source\repos\helloWord\heritage\obj\Debug\netcoreapp3.1\heritage.csprojAssemblyReference.cache
+C:\Users\youcode\source\repos\helloWord\heritage\obj\Debug\netcoreapp3.1\heritage.AssemblyInfoInputs.cache
+C:\Users\youcode\source\repos\helloWord\heritage\obj\Debug\netcoreapp3.1\heritage.AssemblyInfo.cs
+C:\Users\youcode\source\repos\helloWord\heritage\obj\Debug\netcoreapp3.1\heritage.csproj.CoreCompileInputs.cache
+C:\Users\youcode\source\repos\helloWord\heritage\obj\Debug\netcoreapp3.1\heritage.dll
+C:\Users\youcode\source\repos\helloWord\heritage\obj\Debug\netcoreapp3.1\heritage.pdb
+C:\Users\youcode\source\repos\helloWord\heritage\obj\Debug\netcoreapp3.1\heritage.genruntimeconfig.cache

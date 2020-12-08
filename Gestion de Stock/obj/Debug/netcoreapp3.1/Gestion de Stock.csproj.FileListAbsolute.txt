@@ -1,0 +1,13 @@
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\bin\Debug\netcoreapp3.1\Gestion de Stock.exe
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\bin\Debug\netcoreapp3.1\Gestion de Stock.deps.json
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\bin\Debug\netcoreapp3.1\Gestion de Stock.runtimeconfig.json
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\bin\Debug\netcoreapp3.1\Gestion de Stock.runtimeconfig.dev.json
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\bin\Debug\netcoreapp3.1\Gestion de Stock.dll
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\bin\Debug\netcoreapp3.1\Gestion de Stock.pdb
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\obj\Debug\netcoreapp3.1\Gestion de Stock.csprojAssemblyReference.cache
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\obj\Debug\netcoreapp3.1\Gestion de Stock.AssemblyInfoInputs.cache
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\obj\Debug\netcoreapp3.1\Gestion de Stock.AssemblyInfo.cs
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\obj\Debug\netcoreapp3.1\Gestion de Stock.csproj.CoreCompileInputs.cache
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\obj\Debug\netcoreapp3.1\Gestion de Stock.dll
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\obj\Debug\netcoreapp3.1\Gestion de Stock.pdb
+C:\Users\youcode\source\repos\helloWord\Gestion de Stock\obj\Debug\netcoreapp3.1\Gestion de Stock.genruntimeconfig.cache
