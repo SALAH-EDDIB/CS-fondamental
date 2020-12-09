@@ -20,139 +20,145 @@ namespace Gestion_de_Stock
             while (action != 0)
             {
 
-                switch (action)
+                try
                 {
+                    switch (action)
+                    {
 
-                    case (1):
+                        case (1):
 
-                        Console.WriteLine(" Enter Item name ");
-                        string name = Console.ReadLine();
-                        Console.WriteLine(" Enter buy Price");
-                        float buyPrice = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine(" Enter sell price ");
-                        float sellPrice = Convert.ToInt32(Console.ReadLine());
-
-                        if(stock.AddArticle(name , buyPrice , sellPrice) is Article)
-                        {
-                            Console.WriteLine("the Ithem Added successfully");
-                        }
-
-
-                       action = StartAction();
-
-                        break;
-
-                    case (2):
-
-                        stock.ShowArticles();
-
-                      action =  StartAction();
-
-                        break;
-
-
-                    case (3):
-
-                        Console.WriteLine(" Enter Item name Or refrence number ");
-                        string value = Console.ReadLine();
-                        int refNum ;
-
-                        bool isParse = Int32.TryParse(value, out refNum);
-
-                        if (isParse)
-                        {
-                          Article article =  stock.find(refNum) ;
-
-                            if (article != null)
-                                article.ArticleInfo();
-
-                           
-                        }
-                        else
-                        {
-                            Article article = stock.find(value);
-
-                            if (article != null)
-                                article.ArticleInfo();
-
-
-                        }
-
-
-                        action = StartAction();
-
-                        break;
-
-                    case (4):
-
-                        Console.WriteLine(" Enter refrence number ");
-                        value = Console.ReadLine();
-                        isParse = Int32.TryParse(value, out refNum);
-
-                        if (isParse)
-                        {
-                            stock.Delete(refNum);
-                        }
-
-
-
-
-                        action = StartAction();
-
-                        break;
-
-
-                    case (5):
-
-                        Console.WriteLine(" Enter refrence number ");
-                        value = Console.ReadLine();
-                        isParse = Int32.TryParse(value, out refNum);
-
-                        if (isParse)
-                        {
-                          Article article =  stock.find(refNum);
-
-                            if(article != null)
-                            {
                             Console.WriteLine(" Enter Item name ");
-                            name = Console.ReadLine();
+                            string name = Console.ReadLine();
                             Console.WriteLine(" Enter buy Price");
-                            buyPrice = Convert.ToInt32(Console.ReadLine());
+                            float buyPrice = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine(" Enter sell price ");
-                            sellPrice = Convert.ToInt32(Console.ReadLine());
+                            float sellPrice = Convert.ToInt32(Console.ReadLine());
 
-                                stock.Edit(refNum, name, buyPrice, sellPrice);
+                            if (stock.AddArticle(name, buyPrice, sellPrice) is Article)
+                            {
+                                Console.WriteLine("the Ithem Added successfully");
+                            }
+
+
+                            action = StartAction();
+
+                            break;
+
+                        case (2):
+
+                            stock.ShowArticles();
+
+                            action = StartAction();
+
+                            break;
+
+
+                        case (3):
+
+                            Console.WriteLine(" Enter Item name Or refrence number ");
+                            string value = Console.ReadLine();
+                            int refNum;
+
+                            bool isParse = Int32.TryParse(value, out refNum);
+
+                            if (isParse)
+                            {
+                                Article article = stock.find(refNum);
+
+                                if (article != null)
+                                    article.ArticleInfo();
+
 
                             }
                             else
                             {
-                                Console.WriteLine("there is no item with the giving number");
+                                Article article = stock.find(value);
+
+                                if (article != null)
+                                    article.ArticleInfo();
+
+
                             }
-                         
-
-                            
 
 
-                            
-                        }
+                            action = StartAction();
+
+                            break;
+
+                        case (4):
+
+                            Console.WriteLine(" Enter refrence number ");
+                            value = Console.ReadLine();
+                            isParse = Int32.TryParse(value, out refNum);
+
+                            if (isParse)
+                            {
+                                stock.Delete(refNum);
+                            }
 
 
-                     
+
+
+                            action = StartAction();
+
+                            break;
+
+
+                        case (5):
+
+                            Console.WriteLine(" Enter refrence number ");
+                            value = Console.ReadLine();
+                            isParse = Int32.TryParse(value, out refNum);
+
+                            if (isParse)
+                            {
+                                Article article = stock.find(refNum);
+
+                                if (article != null)
+                                {
+                                    Console.WriteLine(" Enter Item name ");
+                                    name = Console.ReadLine();
+                                    Console.WriteLine(" Enter buy Price");
+                                    buyPrice = Convert.ToInt32(Console.ReadLine());
+                                    Console.WriteLine(" Enter sell price ");
+                                    sellPrice = Convert.ToInt32(Console.ReadLine());
+
+                                    stock.Edit(refNum, name, buyPrice, sellPrice);
+
+                                }
+                                else
+                                {
+                                    Console.WriteLine("there is no item with the giving number");
+                                }
 
 
 
 
-                        action = StartAction();
 
-                        break;
 
-                    default:
+                            }
 
-                        action = StartAction();
 
-                        break;
+
+
+
+
+
+                            action = StartAction();
+
+                            break;
+
+                        default:
+
+                            action = StartAction();
+
+                            break;
+                    }
+
+                }catch(Exception e)
+                {
+                    Console.WriteLine( e.Message );
                 }
-
 
             }
 
