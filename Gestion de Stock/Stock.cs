@@ -7,16 +7,21 @@ namespace Gestion_de_Stock
     {
 
         List<Article> articles = new List<Article>();
+        int refNum = 0;
 
 
 
-        public void AddArticle(int refNumber, string name, float buyPrice, float sellPrice)
+
+        public Article AddArticle( string name, float buyPrice, float sellPrice)
         {
 
+            refNum++;
 
-            Article ithem = new Article(refNumber, name, buyPrice, sellPrice);
+            Article ithem = new Article( refNum , name, buyPrice, sellPrice);
 
             articles.Add(ithem);
+
+            return ithem;
 
 
     
@@ -30,21 +35,22 @@ namespace Gestion_de_Stock
         }
 
 
-        public void find(string name)
+        public Article find(string name)
         {
            Article article =  articles.Find(article => article.Name.Contains(name));
 
-            if(article != null)
-            article.ArticleInfo();
+           
+               return article;
+
+
 
         }
 
-        public void find(int refNumber)
+        public Article find(int refNumber)
         {
             Article article = articles.Find(article => article.RefNumber == refNumber);
 
-            if (article != null)
-                article.ArticleInfo();
+            return article;
 
         }
 

@@ -16,6 +16,11 @@ namespace Gestion_De_Comptes_Bancaires
         {
 
 
+
+
+
+
+
             Bank bank = new Bank();
 
             bank.AjouterCompteCarnet(1, "salah", 200 , 14);
@@ -29,10 +34,17 @@ namespace Gestion_De_Comptes_Bancaires
             
 
 
+
+
+
            
 
 
 
         }
     }
+
+
+
+
 }
