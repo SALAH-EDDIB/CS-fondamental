@@ -10,6 +10,10 @@ namespace Gestion_de_Stock
 
             Stock stock = new Stock();
 
+            stock.AddArticle("test 1", 1.3f, 1.4f);
+            stock.AddArticle("test 2", 1.4f, 2.3f);
+            stock.AddArticle("test 3", 3.3f, 3.4f);
+            stock.AddArticle("test 4", 3.4f, 3.5f);
 
             int action = StartAction() ;
 
@@ -66,7 +70,15 @@ namespace Gestion_de_Stock
                                 Article article = stock.find(refNum);
 
                                 if (article != null)
+                                {
                                     article.ArticleInfo();
+                                }
+                                else
+                                {
+                                    Console.WriteLine("there is no item with the giving number");
+                                }
+
+
 
 
                             }
@@ -75,7 +87,16 @@ namespace Gestion_de_Stock
                                 Article article = stock.find(value);
 
                                 if (article != null)
+                                {
                                     article.ArticleInfo();
+
+                                }
+                                else
+                                {
+                                    Console.WriteLine("there is no item with the giving name");
+                                }
+
+
 
 
                             }
@@ -86,6 +107,21 @@ namespace Gestion_de_Stock
                             break;
 
                         case (4):
+
+                            Console.WriteLine(" Enter price");
+
+                            float price = float.Parse(Console.ReadLine());
+
+                            stock.PriceGreater(price);
+
+
+                            action = StartAction();
+
+                            break;
+
+
+
+                        case (5):
 
                             Console.WriteLine(" Enter refrence number ");
                             value = Console.ReadLine();
@@ -104,7 +140,7 @@ namespace Gestion_de_Stock
                             break;
 
 
-                        case (5):
+                        case (6):
 
                             Console.WriteLine(" Enter refrence number ");
                             value = Console.ReadLine();
@@ -166,20 +202,6 @@ namespace Gestion_de_Stock
 
 
 
-       /*     
-
-            stock.AddArticle( "test 1", 1.3f, 1.4f);
-            stock.AddArticle("test 2", 1.4f, 2.3f);
-            stock.AddArticle("test 3", 3.3f, 3.4f);
-            stock.AddArticle("test 4", 3.4f, 3.5f);
-
-
-
-            stock.Edit(3, "test 3333", 3.4f, 5f);
-
-            stock.ShowArticles();*/
-
-
 
 
         }
@@ -191,17 +213,29 @@ namespace Gestion_de_Stock
             Console.WriteLine("******************************");
             Console.WriteLine(" Enter 1 to Add Item ");
             Console.WriteLine(" Enter 2 to View All  Items ");
-            Console.WriteLine(" Enter 3 to find Items whose purchase price is greater than an entered value. ");
-            Console.WriteLine(" Enter 4 to Delete  Item");
-            Console.WriteLine(" Enter 5 to Modify Item ");
+            Console.WriteLine(" Enter 3 to find Items  ");
+            Console.WriteLine(" Enter 4 to find Items whose purchase price is greater than an entered value. ");
+            Console.WriteLine(" Enter 5 to Delete  Item");
+            Console.WriteLine(" Enter 6 to Modify Item ");
             Console.WriteLine("******************************");
 
 
 
 
-            int action = Convert.ToInt32(Console.ReadLine());
+            int action;
+            bool isAction = Int32.TryParse(Console.ReadLine() , out action  );
 
-            return action;
+            if (isAction)
+            {
+                return action;
+            }
+            else{
+                return -1;
+            }
+
+
+
+            
 
 
 
