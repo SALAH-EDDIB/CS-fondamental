@@ -11,32 +11,43 @@ namespace Gestion_De_Comptes_Bancaires
 
 
 
-       public void AjouterCompteCarnet(int numero, string nomProprietaire, float solde, int numéroCanret)
+       public void AjouterCompte(CompteSurCarnet compteCarnet)
 
         {
 
-            CompteSurCarnet compteCarnet = new CompteSurCarnet(numero, nomProprietaire, solde , numéroCanret);
+            
 
 
             comptes.Add(compteCarnet) ;
 
+            System.Console.WriteLine("le compte est ajouté");
+
         }
 
 
-        public void AjouterCompteCheque(int numero, string nomProprietaire, float solde, int numéroChèque, int numéroCarte)
+        public void AjouterCompte(CompteSurCheque compteCheque)
 
         {
 
-            CompteSurCheque compteCheque = new CompteSurCheque(numero, nomProprietaire, solde, numéroChèque , numéroCarte);
+          
 
 
             comptes.Add(compteCheque);
+
+            System.Console.WriteLine("le compte est ajouté");
 
         }
 
         public void Supprimer(int numero)
         {
-            comptes.Remove(comptes.SingleOrDefault(compte => compte.Numero == numero));
+          bool isExist =   comptes.Remove(comptes.SingleOrDefault(compte => compte.Numero == numero));
+
+            if(isExist)
+                System.Console.WriteLine( "compte est supprimer ");
+            else
+                System.Console.WriteLine("le compte n'exist pas");
+
+
         }
 
 
@@ -46,6 +57,8 @@ namespace Gestion_De_Comptes_Bancaires
 
             if (compte != null)
                 compte.compteInfo();
+            else
+                System.Console.WriteLine("le compte n'exist pas");
 
         }
 

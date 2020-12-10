@@ -5,17 +5,24 @@ namespace Gestion_de_Stock
 
     class Program
     {
+
+      
+
+        
+
         static void Main(string[] args)
         {
 
             Stock stock = new Stock();
 
-            stock.AddArticle("test 1", 1.3f, 1.4f);
+       /*   stock.AddArticle("test 1", 1.3f, 1.4f);
             stock.AddArticle("test 2", 1.4f, 2.3f);
             stock.AddArticle("test 3", 3.3f, 3.4f);
-            stock.AddArticle("test 4", 3.4f, 3.5f);
+            stock.AddArticle("test 4", 3.4f, 3.5f);*/
 
             int action = StartAction() ;
+            int refnumber = 0;
+           
 
 
 
@@ -37,11 +44,14 @@ namespace Gestion_de_Stock
                             float buyPrice = Convert.ToInt32(Console.ReadLine());
                             Console.WriteLine(" Enter sell price ");
                             float sellPrice = Convert.ToInt32(Console.ReadLine());
+                            refnumber++;
 
-                            if (stock.AddArticle(name, buyPrice, sellPrice) is Article)
-                            {
-                                Console.WriteLine("the Ithem Added successfully");
-                            }
+                            Article ithem = new Article(  refnumber , name, buyPrice, sellPrice);
+
+
+
+                            stock.AddArticle(ithem);
+                            
 
 
                             action = StartAction();

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System;
+
 
 namespace Gestion_de_Stock
 {
@@ -7,24 +9,23 @@ namespace Gestion_de_Stock
     {
 
         List<Article> articles = new List<Article>();
-        int refNum = 0;
+        
 
 
 
 
-        public Article AddArticle( string name, float buyPrice, float sellPrice)
+        public void AddArticle(Article article)
         {
 
-            refNum++;
-
-            Article ithem = new Article( refNum , name, buyPrice, sellPrice);
-
-            articles.Add(ithem);
-
-            return ithem;
 
 
-    
+            articles.Add(article);
+
+
+
+            Console.WriteLine("the Ithem Added successfully");
+
+
 
         }
 
@@ -48,7 +49,7 @@ namespace Gestion_de_Stock
 
         public Article find(int refNumber)
         {
-            Article article = articles.Find(article => article.RefNumber == refNumber);
+            Article article =  articles.Find(article => article.RefNumber == refNumber);
 
             return article;
 
@@ -68,8 +69,9 @@ namespace Gestion_de_Stock
 
         public void Delete(int refnumber)
         {
-            articles.Remove(articles.SingleOrDefault(article => article.RefNumber == refnumber));
+            articles.Remove( articles.SingleOrDefault(article => article.RefNumber == refnumber) );
         }
+
 
 
         public void Edit(int refNumber, string name, float buyPrice, float sellPrice)
