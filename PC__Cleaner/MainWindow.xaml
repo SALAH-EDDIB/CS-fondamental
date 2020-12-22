@@ -1,0 +1,475 @@
+﻿<Window x:Class="PC__Cleaner.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PC__Cleaner"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="600"  Height="760" Width="1300" MinWidth="1100" >
+    <Window.Resources>
+
+
+        <ResourceDictionary>
+
+
+            <Style x:Key="MenuButtonStyle" TargetType="{x:Type ToggleButton}" >
+
+                <Setter Property="Background" Value="WhiteSmoke"  />
+                <Setter Property="Foreground" Value="gray"  />
+
+                <Setter Property="VerticalAlignment" Value="Center"  />
+                <Setter Property="Height" Value="50"  />
+                <Setter Property="FontSize" Value="14"  />
+                <Setter Property="Margin" Value="20,0,-2,0"  />
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+
+                            <Border CornerRadius="10,0,0,10" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+                                <Grid  >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="55" />
+                                        <ColumnDefinition/>
+
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Path Width="18" Data="{TemplateBinding Tag}" Fill="{TemplateBinding Foreground}" Style="{StaticResource {x:Type Path}}" />
+
+                                    <ContentPresenter Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+                                </Grid>
+
+
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsChecked" Value="True" >
+
+                                    <Setter Property="Background" Value="#E1E4E6"  />
+                                    <Setter Property="Foreground" Value="#1E77C7"  />
+                                    <Setter Property="FontWeight" Value="SemiBold"  />
+
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+
+
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+
+
+
+            <Style x:Key="CardButtonStyle" TargetType="{x:Type Button}" >
+
+                <Setter Property="Background" Value="#1E77C7"  />
+                <Setter Property="Foreground" Value="White"  />
+                
+                <Setter Property="Height" Value="270"  />
+                <Setter Property="Width" Value="250"  />
+                <Setter Property="BorderThickness" Value="0"  />
+
+
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Border  CornerRadius="10" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" >
+
+                                <Grid  Margin="0,80,0,40" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+
+                                    </Grid.RowDefinitions>
+                                    
+                                    
+                                <Path Width="70"   Data="{TemplateBinding Tag}" Fill="{TemplateBinding Foreground}" Style="{StaticResource {x:Type Path}}" />
+
+                                <ContentPresenter   Grid.Row="1"   HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+                                    
+                                </Grid>
+
+
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True" >
+                                    
+                                    
+
+                                    <Setter Property="Background" Value="WhiteSmoke"  />
+                                    <Setter Property="BorderThickness" Value="3"  />
+                                    <Setter Property="BorderBrush" Value="#1E77C7"  />
+                                    <Setter Property="Foreground" Value="#1E77C7"  />
+                                    
+                                   
+                                    <Setter  Property="Effect" >
+
+                                        <Setter.Value>
+                                            <DropShadowEffect  ShadowDepth="1" Color="#bfe6fd" BlurRadius="20"  />
+                                        </Setter.Value>
+
+                                    </Setter>
+
+
+                                    
+                                    
+                         
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+
+
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+
+
+
+
+        </ResourceDictionary>
+
+    </Window.Resources>
+
+
+
+
+
+    <Grid Background="WhiteSmoke"   >
+
+        <Grid.ColumnDefinitions>
+
+
+
+            <ColumnDefinition Width="250"/>
+
+
+
+            <ColumnDefinition/>
+
+
+
+        </Grid.ColumnDefinitions>
+
+
+        <Grid >
+
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="200"  />
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+
+
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+
+
+
+                    <ColumnDefinition Width="80"  />
+
+
+
+                    <ColumnDefinition/>
+
+                </Grid.ColumnDefinitions>
+
+                <Image HorizontalAlignment="Right"  Width="50" Source="/assets/broom.png" />
+
+                <TextBlock
+                        Grid.Column="1"
+                        FontSize="24"
+                        Foreground="#1E77C7"
+                Text="PC-CLEANER"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Center"  />
+            </Grid>
+            <Separator 
+                    VerticalAlignment="Bottom"
+                    Width="200"
+                    Background="#1E77C7"  />
+
+
+
+            <StackPanel Grid.Row="1" Margin="0,50"  >
+
+                <RadioButton  IsChecked="True" Style="{StaticResource MenuButtonStyle}" Content="VUE D'ENSEMBLE"  Tag="{StaticResource screen}" />
+                <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="ANALYSER"  Tag="{StaticResource search}" />
+                <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="HISTORIQUE"  Tag="{StaticResource recent}" />
+                <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="OPTIONS"  Tag="{StaticResource settings}" />
+
+            </StackPanel>
+
+
+
+            <Button   Grid.Row="2" Margin="25,40" VerticalAlignment="Bottom"  FontSize="15"  Content="SITE WEB" Height="50" >
+
+                <Button.Resources>
+          
+
+                    <Style  TargetType="{x:Type Button}" >
+
+                        <Setter Property="Background" Value="#1E77C7"  />
+                        <Setter Property="Foreground" Value="White"  />
+                        <Setter Property="BorderBrush" Value="#1E77C7"  />
+                        
+
+
+
+                        <Setter Property="Template"  >
+
+                            <Setter.Value>
+
+                                <ControlTemplate TargetType="{x:Type Button}">
+
+                                    <Border CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+                                        
+
+                                            <ContentPresenter  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+
+
+
+                                    </Border>
+
+                                    <ControlTemplate.Triggers>
+
+                                        <Trigger Property="IsMouseOver" Value="True" >
+
+                                            <Setter Property="Background" Value="Transparent"  />
+                                            <Setter Property="Foreground" Value="#1E77C7"  />
+                                            <Setter Property="BorderThickness" Value="4"  />
+                                            
+
+                                        </Trigger>
+
+                                    </ControlTemplate.Triggers>
+
+
+                                </ControlTemplate>
+
+                            </Setter.Value>
+
+                        </Setter>
+
+                    </Style>
+
+
+
+
+
+                </Button.Resources>
+
+            </Button>
+
+        </Grid>
+
+
+        <!--main Content-->
+
+        <Frame Grid.Column="1" x:Name="frame" ></Frame>
+        
+        <Grid Grid.Column="1" Background="#E1E4E6" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition  Height="1.7*"  />
+                <RowDefinition  Height="3*"/>
+                <RowDefinition    />
+            </Grid.RowDefinitions>
+
+            <Grid >
+
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition  Width="300" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Margin="60,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" >
+
+                    <TextBlock FontSize="27" Foreground="#1E77C7" Text="Analyser du PC nécessaire " Margin="0,0,0,25" />
+                    <TextBlock FontSize="19" Foreground="#1E77C7"  >
+                        
+                        <Run FontWeight="SemiBold" > Espase à nettoyer :  </Run>
+                        <Run FontSize="17" x:Name="analyseResult" > À déterminer par analyser  </Run>
+
+                    </TextBlock>
+                    <TextBlock FontSize="19" Foreground="#1E77C7"  >
+                        
+                        <Run FontWeight="SemiBold" > Dérniére analyse :  </Run>
+                        <Run FontSize="17" x:Name="date" > 08.06.2020  </Run>
+
+                    </TextBlock>
+                    <TextBlock FontSize="19" Foreground="#1E77C7"  >
+                        
+                        <Run FontWeight="SemiBold" > Dérniére MAJ :  </Run>
+                        <Run FontSize="17" > 08.06.2020   </Run>
+
+                    </TextBlock>
+
+                    <TextBlock  x:Name="analysetext" FontSize="19" Foreground="#1E77C7"  />
+
+
+
+
+                </StackPanel>
+
+                <Button  Grid.Column="1" Margin="40,40,40,0"  FontSize="15"  VerticalAlignment="Center"  Content="ANALYSER" Height="50" Click="Analyser_Button_Click" >
+
+                    
+                        <Button.Resources>
+
+
+                            <Style  TargetType="{x:Type Button}" >
+
+                                <Setter Property="Background" Value="Transparent"  />
+                                <Setter Property="Foreground" Value="#1E77C7"  />
+                            <Setter Property="BorderThickness" Value="4"  />
+                            <Setter Property="BorderBrush" Value="#1E77C7"  />
+
+
+
+
+
+                            <Setter Property="Template"  >
+
+                                    <Setter.Value>
+
+                                        <ControlTemplate TargetType="{x:Type Button}">
+
+                                            <Border CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+
+
+                                                <ContentPresenter  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+
+
+
+                                            </Border>
+
+                                            <ControlTemplate.Triggers>
+
+                                                <Trigger Property="IsMouseOver" Value="True" >
+
+                                                   
+                                                    <Setter Property="Background" Value="#1E77C7"  />
+                                                    <Setter Property="Foreground" Value="White"  />
+                                                    <Setter Property="BorderBrush" Value="#1E77C7"  />
+
+
+                                                </Trigger>
+
+                                            </ControlTemplate.Triggers>
+
+
+                                        </ControlTemplate>
+
+                                    </Setter.Value>
+
+                                </Setter>
+
+                            </Style>
+
+
+
+
+
+
+                        </Button.Resources>
+
+
+
+                  
+
+                </Button>
+
+              
+
+
+            </Grid>
+            <Separator 
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center"
+                    Width="600"
+                    Background="#1E77C7"  />
+
+
+
+            <Grid Grid.Row="1"   >
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+
+                <Button Style="{StaticResource CardButtonStyle }" FontSize="20" HorizontalAlignment="Right"  Content="NETTOYER"  Tag="{StaticResource broom}" Click="Nettoyer_Button_Click" />
+                <Button Grid.Column="1" Style="{StaticResource CardButtonStyle }" FontSize="20"   Content="HISTORIQUE"  Tag="{StaticResource history}" />
+                <Button Grid.Column="2" Style="{StaticResource CardButtonStyle }" FontSize="20" HorizontalAlignment="Left" Content="MISE À JOUR"  Tag="{StaticResource maj}" />
+        
+
+
+            </Grid>
+
+            <Separator Grid.Row="1"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center"
+                    Width="600"
+                    Background="#1E77C7"  />
+
+            <TextBlock Margin="60,50,0,0" Grid.Row="2" FontSize="19" Foreground="#1E77C7" Text="PC-CLEANER est un logiciel made in Youcode qui respecte votre vie privée" />
+
+
+
+
+        </Grid>
+        
+
+        
+        
+        
+        
+
+
+
+
+    </Grid>
+
+
+
+
+
+
+
+</Window>

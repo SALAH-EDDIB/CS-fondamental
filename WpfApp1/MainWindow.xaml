@@ -5,14 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button HorizontalAlignment="Left" Margin="30,26,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" Height="39">
-            <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
-        </Button>
-        <Calendar HorizontalAlignment="Left" VerticalAlignment="Top" Margin="260,110,0,0"/>
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="130,155,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
-        <Slider HorizontalAlignment="Left" Margin="535,137,0,0" VerticalAlignment="Top" Width="135"/>
+        Title="MainWindow" Height="491.6" Width="372.8">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <!-- numbers Buttons  -->
+
+        <Button x:Name="btn7"  Grid.Row="2" Grid.Column="0" FontSize="18" Click="Button_Click" Background="White" BorderBrush="#FFE7E7E7" >7</Button>
+        <Button x:Name="btn8"  Grid.Row="2" Grid.Column="1" FontSize="18" Click="Button_Click" Background="White" BorderBrush="#FFE7E7E7">8</Button>
+        <Button x:Name="btn9"  Grid.Row="2" Grid.Column="2" FontSize="18" Click="Button_Click" Background="White" BorderBrush="#FFE7E7E7" >9</Button>
+        <Button x:Name="btn4"  Grid.Row="3" Grid.Column="0" FontSize="18" Click="Button_Click" Background="White" BorderBrush="#FFE7E7E7">4</Button>
+        <Button x:Name="btn5"  Grid.Row="3" Grid.Column="1" FontSize="18" Click="Button_Click" Background="White" BorderBrush="#FFE7E7E7" >5</Button>
+        <Button x:Name="btn6"  Grid.Row="3" Grid.Column="2" FontSize="18" Click="Button_Click" Background="White" BorderBrush="#FFE7E7E7">6</Button>
+        <Button x:Name="btn1"  Grid.Row="4" Grid.Column="0" FontSize="18" Click="Button_Click" Background="White" BorderBrush="#FFE7E7E7" >1</Button>
+        <Button x:Name="btn2"  Grid.Row="4" Grid.Column="1" FontSize="18" Click="Button_Click" Background="White" BorderBrush="#FFE7E7E7" >2</Button>
+        <Button x:Name="btn3"  Grid.Row="4" Grid.Column="2" FontSize="18" Click="Button_Click" Background="White" BorderBrush="#FFE7E7E7" >3</Button>
+        <Button x:Name="btn0"  Grid.Row="5" Grid.Column="1" FontSize="18" Click="Button_Click" Background="White" BorderBrush="#FFE7E7E7" >0</Button>
+
+        <!-- maths Buttons  -->
+
+        <Button x:Name="btnPositiveNegetive"  Grid.Row="5" Grid.Column="0" FontSize="18" Background="White" BorderBrush="#FFE7E7E7" Click="btnPositiveNegetive_Click" >+-</Button>
+        <Button x:Name="btnDot"  Grid.Row="5" Grid.Column="2" FontSize="20" Background="White" BorderBrush="#FFE7E7E7" Click="Button_Click"   >.</Button>
+        <Button x:Name="btnEquals"  Grid.Row="5" Grid.Column="3" FontSize="18" BorderBrush="#FFE7E7E7" Click="btnEquals_Click" Background="#FF7FA9DD" >=</Button>
+        <Button x:Name="btnDivide"  Grid.Row="4" Grid.Column="3" FontSize="18" BorderBrush="#FFE7E7E7" Click="operationBtn_Click" Background="#FFF1F1F1" >/</Button>
+        <Button x:Name="btnTimes"  Grid.Row="3" Grid.Column="3" FontSize="18" BorderBrush="#FFE7E7E7" Click="operationBtn_Click" Background="#FFF1F1F1" >*</Button>
+        <Button x:Name="btnMinus"  Grid.Row="2" Grid.Column="3" FontSize="18" BorderBrush="#FFE7E7E7" Click="operationBtn_Click" Background="#FFF1F1F1" >-</Button>
+        <Button x:Name="btnPlus"  Grid.Row="1" Grid.Column="3" FontSize="18" BorderBrush="#FFE7E7E7" Click="operationBtn_Click" Background="#FFF1F1F1" >+</Button>
+
+        <!-- clear Buttons  -->
+
+        <Button x:Name="btnBackspace"  Grid.Row="1" Grid.Column="2" FontSize="18" Content="&lt;=" BorderBrush="#FFE7E7E7" Background="#FFF1F1F1" Click="btnBackspace_Click" ></Button>
+        <Button x:Name="btnClear"  Grid.Row="1" Grid.Column="1"  FontSize="18" BorderBrush="#FFE7E7E7" Background="#FFF1F1F1" Click="btnClear_Click" >C</Button>
+        <Button x:Name="btnClearEntry"  Grid.Row="1" Grid.Column="0" FontSize="18" BorderBrush="#FFE7E7E7" Background="#FFF1F1F1" Click="btnClearEntry_Click" >CE</Button>
+
+        <!-- display text box -->
+
+        <TextBox x:Name="txtdisplay" IsReadOnly="true" TextAlignment="Right" BorderThickness="0"  VerticalContentAlignment="Bottom" FontSize="32"  Grid.Row="0" Grid.ColumnSpan="4" Margin="0,38,0.4,76.4" Grid.RowSpan="2" >0</TextBox>
+        <TextBox x:Name="display" Grid.ColumnSpan="4" Grid.Row="0" Height="38" BorderThickness="0"  TextAlignment="Right" FontSize="20" VerticalContentAlignment="Bottom" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Foreground="#FF858585" Margin="0,0,0.4,39.6" HorizontalAlignment="Right" Width="366"  />
 
 
     </Grid>

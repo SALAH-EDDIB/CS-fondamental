@@ -24,10 +24,6 @@ namespace Gestion_de_Stock
             int refnumber = 0;
            
 
-
-
-
-
             while (action != 0)
             {
 
@@ -48,11 +44,7 @@ namespace Gestion_de_Stock
 
                             Article ithem = new Article(  refnumber , name, buyPrice, sellPrice);
 
-
-
                             stock.AddArticle(ithem);
-                            
-
 
                             action = StartAction();
 
@@ -89,8 +81,6 @@ namespace Gestion_de_Stock
                                 }
 
 
-
-
                             }
                             else
                             {
@@ -105,7 +95,6 @@ namespace Gestion_de_Stock
                                 {
                                     Console.WriteLine("there is no item with the giving name");
                                 }
-
 
 
 
@@ -215,7 +204,6 @@ namespace Gestion_de_Stock
 
 
         }
-
 
 
         static int StartAction()

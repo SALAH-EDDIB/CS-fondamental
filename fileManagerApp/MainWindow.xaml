@@ -1,0 +1,368 @@
+﻿<Window x:Class="fileManagerApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fileManagerApp"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:ccontrols="clr-namespace:fileManagerApp.CControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1450.5"
+        ResizeMode="NoResize"
+        WindowState="Normal"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        FontSize="15"
+        
+        >
+
+    <Window.Resources>
+
+
+        <ResourceDictionary>
+
+
+            <Style x:Key="MenuButtonStyle" TargetType="{x:Type ToggleButton}" >
+
+                <Setter Property="Background" Value="WhiteSmoke"  />
+                <Setter Property="Foreground" Value="gray"  />
+
+                <Setter Property="VerticalAlignment" Value="Center"  />
+                <Setter Property="Height" Value="40"  />
+                <Setter Property="Margin" Value="20,0,-2,0"  />
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+
+                            <Border CornerRadius="10,0,0,10" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50" />
+                                        <ColumnDefinition/>
+
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Path Data="{TemplateBinding Tag}" Fill="{TemplateBinding Foreground}" Style="{StaticResource {x:Type Path}}" />
+
+                                    <ContentPresenter Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+                                </Grid>
+
+
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsChecked" Value="True" >
+
+                                    <Setter Property="Background" Value="#E1E4E6"  />
+                                    <Setter Property="Foreground" Value="Teal"  />
+                                    <Setter Property="FontWeight" Value="SemiBold"  />
+
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+
+
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+            <Style x:Key="CardControlStyle1" TargetType="{x:Type ccontrols:CardControl}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ccontrols:CardControl}">
+                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="True">
+                                <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+
+        </ResourceDictionary>
+
+    </Window.Resources>
+
+
+
+    <Border Background="WhiteSmoke" CornerRadius="10">
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+
+                <!--left panel-->
+
+                <ColumnDefinition Width="250"/>
+
+                <!-- main content -->
+
+                <ColumnDefinition/>
+
+                <!--right panel-->
+
+                <ColumnDefinition Width="250"/>
+
+            </Grid.ColumnDefinitions>
+
+
+            <Grid >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="20" />
+                    <RowDefinition Height="140"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock
+                FontSize="30"
+                Text="File MG"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"  />
+
+                <Separator 
+                    VerticalAlignment="Bottom"
+                    Width="200"
+                    Background="LightGray" />
+
+                <StackPanel Grid.Row="1" VerticalAlignment="Center" Width="200" >
+                    <Button Grid.Row="1" Content="salah eddib"   >
+
+                        <Button.Style>
+                            <Style TargetType="{x:Type Button }" >
+                                <Setter Property="Height" Value="50"  />
+                                <Setter Property="FontWeight" Value="SemiBold"  />
+                                <Setter Property="FontSize" Value="16"  />
+                                <Setter Property="Background"  Value="#E1E4E6" />
+                                <Setter Property="Foreground"  Value="Teal" />
+                                <Setter Property="Width"  Value="200" />
+                                <Setter Property="Template" >
+                                    <Setter.Value>
+
+                                        <ControlTemplate  TargetType="{x:Type Button}">
+
+                                            <Border 
+                                            CornerRadius="25"
+                                            Background="{TemplateBinding Background}"
+                                            BorderThickness="{TemplateBinding BorderThickness}">
+
+                                                <Grid>
+                                                    <Ellipse HorizontalAlignment="Left" Stroke="White" StrokeThickness="3" Width="50"  Margin="0" >
+                                                        <Ellipse.Fill  >
+                                                            <ImageBrush ImageSource="/assets/eren.jpg" />
+                                                        </Ellipse.Fill>
+                                                    </Ellipse>
+
+                                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="{TemplateBinding Content}" />
+
+
+                                                </Grid>
+
+                                            </Border>
+
+                                        </ControlTemplate>
+
+                                    </Setter.Value>
+                                </Setter>
+
+                            </Style>
+
+                        </Button.Style>
+                    </Button>
+
+                    <Grid Width="65" HorizontalAlignment="Left" Margin="17,20,0,0">
+                        <TextBlock Text="Logout" VerticalAlignment="Center" Foreground="gray" Margin="0,0,12,0" />
+
+                        <fa:ImageAwesome Icon="ArrowRight"  Foreground="Gray" Height="12" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,6,-8,2"      />
+
+                    </Grid>
+
+                </StackPanel>
+
+                <Separator  Grid.Row="1"
+                    VerticalAlignment="Bottom"
+                    Width="200"
+                    Background="LightGray" />
+
+                <StackPanel Grid.Row="2" Margin="0,10"  >
+
+                    <RadioButton  Style="{StaticResource MenuButtonStyle}" Content="Home"  Tag="{StaticResource home}" />
+                    <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="Shares Files"  Tag="{StaticResource sharedfolders}" />
+                    <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="Starred"  Tag="{StaticResource starred}" />
+                    <RadioButton Style="{StaticResource MenuButtonStyle}" Content="Statistics"  Tag="{StaticResource statistics}" />
+                    <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="Settings"  Tag="{StaticResource settings}" />
+                    <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="Support"  Tag="{StaticResource support}" />
+
+                </StackPanel>
+
+                <Grid Grid.Row="4">
+
+
+
+                    <Rectangle  Width="200" RadiusX="10" RadiusY="10" StrokeDashArray="3" StrokeThickness="2" Stroke="silver" />
+
+                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                        <Path Data="{StaticResource documentfile}" Style="{StaticResource {x:Type Path}}"  />
+                        <TextBlock Text="drop File" Foreground="gray" Margin="0,5,0,0" />
+
+                    </StackPanel>
+
+
+                </Grid>
+
+                <Button Grid.Row="5" Margin="25" BorderThickness="0" Background="Teal" Foreground="White" Content="Upload file" Height="50" >
+
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}" >
+
+                            <Setter Property="CornerRadius" Value="10" />
+
+                        </Style>
+                    </Button.Resources>
+
+                </Button>
+
+            </Grid>
+
+
+            <Grid  Grid.Column="1" Background="#E1E4E6" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+
+                <Grid Height="100" VerticalAlignment="Top" Margin="40,0,40.4,0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="200" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border CornerRadius="10" Height="50" Background="White" >
+
+                        <Grid VerticalAlignment="Stretch" >
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50" />
+                                <ColumnDefinition  />
+                                <ColumnDefinition Width="50" />
+                            </Grid.ColumnDefinitions>
+
+                            <Path Data="{StaticResource  search}" Style="{StaticResource {x:Type Path}}" />
+
+                            <TextBlock Foreground="Gray" Text="search" Grid.ColumnSpan="3" Padding="50,0" VerticalAlignment="Center" />
+
+                            <Path Grid.Column="2" Data="{StaticResource  mic}" Style="{StaticResource {x:Type Path}}" />
+
+                        </Grid>
+
+                    </Border>
+                    <Button Grid.Column="1" Margin="25,0,0,0" BorderThickness="0" Background="Teal" Foreground="White"  Height="50" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"  >
+
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}" >
+
+                                <Setter Property="CornerRadius" Value="10" />
+
+                            </Style>
+
+                            <!--<Style TargetType="{x:Type Button}" >
+
+                                
+
+                                <Setter Property="Template" >
+
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}" >
+                                        <ControlTemplate.Triggers>
+
+                                            <Trigger Property="IsMouseOver" Value="True" >
+
+                                                <Setter Property="Background" Value="White"  />
+                                                <Setter Property="Foreground" Value="Teal"  />
+                                             
+
+
+
+                                            </Trigger>
+
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                                    
+                            </Setter>
+                            
+                        </Style>-->
+                        </Button.Resources>
+
+                        <Button.Content>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50" />
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Path Data="{StaticResource plus}" Fill="White"  Style="{StaticResource {x:Type Path}}" HorizontalAlignment="Center"    />
+                                <TextBlock Grid.Column="1" Text="Create New"  VerticalAlignment="Center"  HorizontalAlignment="Center"  />
+                            </Grid>
+
+
+
+                        </Button.Content>
+
+
+
+                    </Button>
+
+
+
+
+
+
+                </Grid>
+
+
+                <StackPanel Orientation="Vertical" Grid.Row="1" Margin="20,0" >
+                    <WrapPanel>
+
+                        <ccontrols:CardControl Lastchange="Last Changes : 13.11.20"  IsChecked="True" DriveName="Google drive" ImageSource="/assets/googledrive.png" Style="{DynamicResource CardControlStyle1}" />
+                        <ccontrols:CardControl Lastchange="Last Changes : 13.11.20"  Margin="20,0" DriveName="Dropbox" ImageSource="/assets/dropbox.png" />
+                        <ccontrols:CardControl Lastchange="Last Changes : 13.11.20" DriveName="One Drive" ImageSource="/assets/onedrive.png" />
+
+                    </WrapPanel>
+
+                </StackPanel>
+
+            </Grid>
+
+
+        </Grid>
+
+
+
+    </Border>
+
+
+
+</Window>

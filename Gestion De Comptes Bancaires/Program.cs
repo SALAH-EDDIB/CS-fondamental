@@ -17,22 +17,11 @@ namespace Gestion_De_Comptes_Bancaires
         {
 
 
-
-
-
-
-
             Bank bank = new Bank();
-
-
 
 
             int action = StartAction();
             int number = 0;
-
-
-
-
 
 
             while (action != 0)
@@ -84,7 +73,6 @@ namespace Gestion_De_Comptes_Bancaires
 
                             break;
 
-
                         case (3):
 
                             Console.WriteLine(" Enter le compte numero ");
@@ -107,8 +95,13 @@ namespace Gestion_De_Comptes_Bancaires
                             break;
 
 
+                        case  (5):
 
+                            bank.AfficherList();
 
+                            action = StartAction();
+
+                            break;
                         default:
 
                             action = StartAction();
@@ -131,13 +124,6 @@ bank.comptes.ForEach(c => c.compteInfo());
 
 
         }
-
-
-       
-
-
-
-            
 
 
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System;
 
 
 namespace Gestion_De_Comptes_Bancaires
@@ -15,14 +16,14 @@ namespace Gestion_De_Comptes_Bancaires
 
         {
 
-            
-
 
             comptes.Add(compteCarnet) ;
 
-            System.Console.WriteLine("le compte est ajouté");
+            Console.WriteLine(" le compte est ajouté ");
 
         }
+
+
 
 
         public void AjouterCompte(CompteSurCheque compteCheque)
@@ -31,21 +32,31 @@ namespace Gestion_De_Comptes_Bancaires
 
           
 
-
             comptes.Add(compteCheque);
 
-            System.Console.WriteLine("le compte est ajouté");
+            Console.WriteLine("le compte est ajouté");
 
         }
+
+
+
+        public void AfficherList()
+        {
+            foreach (Compte compte in comptes)
+            {
+                compte.compteInfo();
+            }
+        }
+
 
         public void Supprimer(int numero)
         {
           bool isExist =   comptes.Remove(comptes.SingleOrDefault(compte => compte.Numero == numero));
 
             if(isExist)
-                System.Console.WriteLine( "compte est supprimer ");
+                Console.WriteLine( "compte est supprimer ");
             else
-                System.Console.WriteLine("le compte n'exist pas");
+                Console.WriteLine("le compte n'exist pas");
 
 
         }
@@ -58,7 +69,7 @@ namespace Gestion_De_Comptes_Bancaires
             if (compte != null)
                 compte.compteInfo();
             else
-                System.Console.WriteLine("le compte n'exist pas");
+                Console.WriteLine("le compte n'exist pas");
 
         }
 

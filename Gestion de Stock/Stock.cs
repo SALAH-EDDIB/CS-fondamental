@@ -17,15 +17,9 @@ namespace Gestion_de_Stock
         public void AddArticle(Article article)
         {
 
-
-
             articles.Add(article);
 
-
-
             Console.WriteLine("the Ithem Added successfully");
-
-
 
         }
 
@@ -38,12 +32,9 @@ namespace Gestion_de_Stock
 
         public Article find(string name)
         {
-           Article article =  articles.Find(article => article.Name.Contains(name));
+            Article article =  articles.Find(article => article.Name.Contains(name));
 
-           
-               return article;
-
-
+            return article ;
 
         }
 
@@ -51,7 +42,7 @@ namespace Gestion_de_Stock
         {
             Article article =  articles.Find(article => article.RefNumber == refNumber);
 
-            return article;
+            return article ;
 
         }
 
@@ -63,21 +54,32 @@ namespace Gestion_de_Stock
 
             if (newArticles.Count > 0)
                 newArticles.ForEach(article => article.ArticleInfo());
+            else
+                Console.WriteLine("no article with giving price ");
+
 
 
         }
+
+
 
         public void Delete(int refnumber)
         {
-            articles.Remove( articles.SingleOrDefault(article => article.RefNumber == refnumber) );
+            if (articles.Remove(find(refnumber)))
+                Console.WriteLine("Article deleted ");
+            else
+                Console.WriteLine("Article not found ");
         }
+
+
+
 
 
 
         public void Edit(int refNumber, string name, float buyPrice, float sellPrice)
         {
 
-            Article article = articles.Find(article => article.RefNumber == refNumber);
+            Article article = find(refNumber);
 
             if (article != null)
             {

@@ -1,0 +1,17 @@
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\bin\Debug\PC__Cleaner.exe.config
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\bin\Debug\PC__Cleaner.exe
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\bin\Debug\PC__Cleaner.pdb
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\PC__Cleaner.csprojAssemblyReference.cache
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\assets\icons.baml
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\MainWindow.g.cs
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\App.g.cs
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\PC__Cleaner_MarkupCompile.cache
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\PC__Cleaner_MarkupCompile.lref
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\App.baml
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\MainWindow.baml
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\PC__Cleaner.g.resources
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\PC__Cleaner.Properties.Resources.resources
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\PC__Cleaner.csproj.GenerateResource.cache
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\PC__Cleaner.csproj.CoreCompileInputs.cache
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\PC__Cleaner.exe
+C:\Users\youcode\source\repos\helloWord\PC__Cleaner\obj\Debug\PC__Cleaner.pdb
