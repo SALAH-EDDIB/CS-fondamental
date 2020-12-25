@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PC__Cleaner"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="600"  Height="760" Width="1300" MinWidth="1100" >
+        Icon="/assets/broom.png"
+        Title="DotCleaner" MinHeight="600"  Height="760" Width="1300" MinWidth="1100" >
+
+    <!--#1E77C7-->
     <Window.Resources>
 
 
@@ -194,8 +197,6 @@
 
                     <ColumnDefinition Width="80"  />
 
-
-
                     <ColumnDefinition/>
 
                 </Grid.ColumnDefinitions>
@@ -219,9 +220,9 @@
 
             <StackPanel Grid.Row="1" Margin="0,50"  >
 
-                <RadioButton  IsChecked="True" Style="{StaticResource MenuButtonStyle}" Content="VUE D'ENSEMBLE"  Tag="{StaticResource screen}" />
-                <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="ANALYSER"  Tag="{StaticResource search}" />
-                <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="HISTORIQUE"  Tag="{StaticResource recent}" />
+                <RadioButton  x:Name="btn"  Style="{StaticResource MenuButtonStyle}" Content="VUE D'ENSEMBLE"  Tag="{StaticResource screen}" Checked="RadioButton_Checked_1" />
+                <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="ANALYSER"  Tag="{StaticResource search}" Checked="RadioButton_Checked_2" />
+                <RadioButton  x:Name="btn2" Style="{StaticResource MenuButtonStyle}"  Content="HISTORIQUE"  Tag="{StaticResource recent}" Checked="RadioButton_Checked" />
                 <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="OPTIONS"  Tag="{StaticResource settings}" />
 
             </StackPanel>
@@ -295,171 +296,16 @@
 
         <!--main Content-->
 
-        <Frame Grid.Column="1" x:Name="frame" ></Frame>
-        
-        <Grid Grid.Column="1" Background="#E1E4E6" >
+        <Frame Grid.Column="1" x:Name="frame" NavigationUIVisibility="Hidden" ></Frame>
 
-            <Grid.RowDefinitions>
-                <RowDefinition  Height="1.7*"  />
-                <RowDefinition  Height="3*"/>
-                <RowDefinition    />
-            </Grid.RowDefinitions>
 
-            <Grid >
 
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition  Width="300" />
-                </Grid.ColumnDefinitions>
 
-                <StackPanel Margin="60,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" >
 
-                    <TextBlock FontSize="27" Foreground="#1E77C7" Text="Analyser du PC nécessaire " Margin="0,0,0,25" />
-                    <TextBlock FontSize="19" Foreground="#1E77C7"  >
-                        
-                        <Run FontWeight="SemiBold" > Espase à nettoyer :  </Run>
-                        <Run FontSize="17" x:Name="analyseResult" > À déterminer par analyser  </Run>
 
-                    </TextBlock>
-                    <TextBlock FontSize="19" Foreground="#1E77C7"  >
-                        
-                        <Run FontWeight="SemiBold" > Dérniére analyse :  </Run>
-                        <Run FontSize="17" x:Name="date" > 08.06.2020  </Run>
 
-                    </TextBlock>
-                    <TextBlock FontSize="19" Foreground="#1E77C7"  >
-                        
-                        <Run FontWeight="SemiBold" > Dérniére MAJ :  </Run>
-                        <Run FontSize="17" > 08.06.2020   </Run>
 
-                    </TextBlock>
-
-                    <TextBlock  x:Name="analysetext" FontSize="19" Foreground="#1E77C7"  />
-
-
-
-
-                </StackPanel>
-
-                <Button  Grid.Column="1" Margin="40,40,40,0"  FontSize="15"  VerticalAlignment="Center"  Content="ANALYSER" Height="50" Click="Analyser_Button_Click" >
-
-                    
-                        <Button.Resources>
-
-
-                            <Style  TargetType="{x:Type Button}" >
-
-                                <Setter Property="Background" Value="Transparent"  />
-                                <Setter Property="Foreground" Value="#1E77C7"  />
-                            <Setter Property="BorderThickness" Value="4"  />
-                            <Setter Property="BorderBrush" Value="#1E77C7"  />
-
-
-
-
-
-                            <Setter Property="Template"  >
-
-                                    <Setter.Value>
-
-                                        <ControlTemplate TargetType="{x:Type Button}">
-
-                                            <Border CornerRadius="10" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
-
-
-
-                                                <ContentPresenter  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
-
-
-
-
-
-                                            </Border>
-
-                                            <ControlTemplate.Triggers>
-
-                                                <Trigger Property="IsMouseOver" Value="True" >
-
-                                                   
-                                                    <Setter Property="Background" Value="#1E77C7"  />
-                                                    <Setter Property="Foreground" Value="White"  />
-                                                    <Setter Property="BorderBrush" Value="#1E77C7"  />
-
-
-                                                </Trigger>
-
-                                            </ControlTemplate.Triggers>
-
-
-                                        </ControlTemplate>
-
-                                    </Setter.Value>
-
-                                </Setter>
-
-                            </Style>
-
-
-
-
-
-
-                        </Button.Resources>
-
-
-
-                  
-
-                </Button>
-
-              
-
-
-            </Grid>
-            <Separator 
-                    VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center"
-                    Width="600"
-                    Background="#1E77C7"  />
-
-
-
-            <Grid Grid.Row="1"   >
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-
-
-                <Button Style="{StaticResource CardButtonStyle }" FontSize="20" HorizontalAlignment="Right"  Content="NETTOYER"  Tag="{StaticResource broom}" Click="Nettoyer_Button_Click" />
-                <Button Grid.Column="1" Style="{StaticResource CardButtonStyle }" FontSize="20"   Content="HISTORIQUE"  Tag="{StaticResource history}" />
-                <Button Grid.Column="2" Style="{StaticResource CardButtonStyle }" FontSize="20" HorizontalAlignment="Left" Content="MISE À JOUR"  Tag="{StaticResource maj}" />
-        
-
-
-            </Grid>
-
-            <Separator Grid.Row="1"
-                    VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center"
-                    Width="600"
-                    Background="#1E77C7"  />
-
-            <TextBlock Margin="60,50,0,0" Grid.Row="2" FontSize="19" Foreground="#1E77C7" Text="PC-CLEANER est un logiciel made in Youcode qui respecte votre vie privée" />
-
-
-
-
-        </Grid>
-        
-
-        
-        
-        
-        
 
 
 

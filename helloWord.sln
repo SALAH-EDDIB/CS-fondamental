@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fileManagerApp", "fileManag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PC__Cleaner", "PC__Cleaner\PC__Cleaner.csproj", "{1EC384F1-83E9-438D-B833-2BB5F72769F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cleanerUpdater", "cleanerUpdater\cleanerUpdater.csproj", "{025B6228-A131-4A7F-8EEE-8ADB8719A3C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{1EC384F1-83E9-438D-B833-2BB5F72769F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EC384F1-83E9-438D-B833-2BB5F72769F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EC384F1-83E9-438D-B833-2BB5F72769F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{025B6228-A131-4A7F-8EEE-8ADB8719A3C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{025B6228-A131-4A7F-8EEE-8ADB8719A3C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{025B6228-A131-4A7F-8EEE-8ADB8719A3C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{025B6228-A131-4A7F-8EEE-8ADB8719A3C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
