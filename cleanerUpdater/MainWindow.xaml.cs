@@ -44,7 +44,7 @@ namespace cleanerUpdater
                 {
                     Thread.Sleep(40);
 
-                    this.Dispatcher.Invoke(async () => {
+                    this.Dispatcher.Invoke( () => {
 
                         if (i == 100)
                         {
@@ -58,7 +58,7 @@ namespace cleanerUpdater
                                 File.Delete(file);
                             }
 
-                            client.DownloadFile("https://download1647.mediafire.com/vz5jb6tt16lg/zwfo8bq1pe4xaoj/Release.zip", @"C:\Users\youcode\source\repos\helloWord\PC__Cleaner\bin\backup\Release.zip");
+                            client.DownloadFile("http://download2264.mediafire.com/769cru4d1mmg/zwfo8bq1pe4xaoj/Release.zip", @"C:\Users\youcode\source\repos\helloWord\PC__Cleaner\bin\backup\Release.zip");
 
                             string zipPath = @"C:\Users\Youcode\source\repos\helloWord\PC__Cleaner\bin\backup\Release.zip";
 
